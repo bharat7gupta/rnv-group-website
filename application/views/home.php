@@ -32,7 +32,8 @@
 </head>
 
 <body>
-	
+	<div id="preloader"></div>
+
 	<?php $this->load->view('header') ?>
 	<?php $this->load->view('social-icons') ?>
 	<?php $this->load->view('home-main') ?>
