@@ -1,0 +1,103 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #17a2b8;
+	height: 100vh;
+}
+
+.admin-menu {
+	list-style: none;
+	padding: 10px;
+	margin-bottom: 0;
+}
+
+.admin-menu li {
+	display: inline-block;
+	padding: 10px;
+}
+
+#account {
+	width: 400px;
+	margin: auto;
+	margin-top: 120px;
+	border: 1px solid #9C9C9C;
+	background-color: #EAEAEA;
+	box-sizing: border-box;
+	border-radius: 4px;
+}
+
+#account #login-form {
+	padding: 20px;
+}
+
+#account .g-recaptcha {
+	margin-top: 32px;
+	transform: scale(1.085);
+	transform-origin: 0;
+}
+
+@media (max-width: 768px) {
+	#account {
+		width: auto;
+		margin-top: 20px;
+	}
+
+	#account .g-recaptcha {
+		transform: scale(0.94);
+		transform-origin: 0;
+	}
+}
+
+#messages,
+#quotes,
+#jobs {
+	margin: auto;
+	padding: 20px;
+}
+
+#messages .header,
+#quotes .header,
+#jobs .header {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 15px;
+}
+
+.box {
+	margin-top: 20px;
+	border: 1px solid #9C9C9C;
+	background-color: #EAEAEA;
+	border-radius: 4px;
+}
+
+.user-message,
+.job {
+	background: white;
+	border-radius: 4px;
+	margin: 10px;
+	padding: 20px 10px;
+	position: relative;
+}
+
+.job .actions {
+	position: absolute;
+	right: 10px;
+	top: 20px;
+}
+
+.job .actions i {
+	padding: 0 10px;
+	cursor: pointer;
+}
+
+.user-message .message-field,
+.job .job-field {
+	margin-left: 0;
+	padding: 5px 0;
+}
+
+.user-message .message-field .message-field-name,
+.job .job-field .job-field-name {
+	white-space: pre;
+	font-weight: bold;
+}
