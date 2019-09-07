@@ -5,7 +5,6 @@
 	<div class="hero-container">
 		<div class="wow fadeIn">
 			<div class="hero-logo">
-				<!-- <img class="" src="img/logo.png" alt="Imperial"> -->
 				<?php echo img('assets/img/logo.png') ?>
 			</div>	
 			<h1>Welcome to RNV SOFTWARE SERVICES LLP</h1>

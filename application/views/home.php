@@ -22,10 +22,7 @@
 
 	<link href="<?php echo base_url('/favicon.ico') ?>" rel="shortcut icon">
 
-	<?php echo link_tag('assets/css/lib/google-font.css') ?>
 	<?php echo link_tag('assets/css/lib/bootstrap.min.css') ?>
-	<?php echo link_tag('assets/css/lib/ionicons/css/ionicons.min.css') ?>
-	<?php echo link_tag('assets/css/lib/font-awesome/css/font-awesome.min.css') ?>
 	<?php echo link_tag('assets/css/common.css') ?>
 	<?php echo link_tag('assets/css/style.css') ?>
 

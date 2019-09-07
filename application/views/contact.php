@@ -12,7 +12,7 @@
 		<div class="row contact-info">
 
 			<div class="col-md-3">
-				<a class="contact-item contact-address" href='<?= CONTACT_ADDRESS_LINK ?>' target="_blank">
+				<a class="contact-item contact-address" href='<?= CONTACT_ADDRESS_LINK ?>' target="_blank" rel="noopener">
 					<i class="ion-ios-location-outline"></i>
 					<h3><?= CONTACT_ADDRESS_TITLE ?></h3>
 					<address><?= CONTACT_ADDRESS_FIRST_LINE ?></address>
@@ -38,7 +38,7 @@
 			</div>
 
 			<div class="col-md-3">
-				<a class="contact-item contact-whatsapp" href="<?= getWhatsAppLink() ?>" target="_blank">
+				<a class="contact-item contact-whatsapp" href="<?= getWhatsAppLink() ?>" target="_blank" rel="noopener">
 					<i class="ion-social-whatsapp-outline"></i>
 					<h3><?= CONTACT_WHATSAPP_DISPLAY_TEXT ?></h3>
 					<p><?= CONTACT_WHATSAPP_DISPLAY_NUMBER ?></p>

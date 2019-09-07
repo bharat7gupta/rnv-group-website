@@ -44,6 +44,11 @@
 				<div class="job">
 					<div class="job-field-container">
 
+						<div class="job-field row job-id">
+							<div class="job-field-name col-md-3">Job ID:</div>
+							<div class="job-field-value col-md-9"><?= $row->jobID ?></div>
+						</div>
+
 						<div class="job-field row job-title">
 							<div class="job-field-name col-md-3">Job Title:</div>
 							<div class="job-field-value col-md-9"><?= $row->jobTitle ?></div>

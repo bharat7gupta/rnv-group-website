@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<?php echo link_tag('assets/css/lib/bootstrap.min.css') ?>
+	<?php echo link_tag('assets/css/common.css') ?>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/lib/jquery.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('assets/js/lib/bootstrap.min.js') ?>"></script>
 </head>
@@ -14,7 +15,7 @@
 	<br>
 
 	<?php
-		 $mode = PAYMENT_MODE; 
+		 $mode = PAYMENT_MODE;
 		 $secretkey = $mode == "PROD" ? PAYMENT_PROD_SECRET_KEY : PAYMENT_TEST_SECRET_KEY;
 		 $orderId = $_POST["orderId"];
 		 $orderAmount = $_POST["orderAmount"];
@@ -25,7 +26,7 @@
 		 $txTime = $_POST["txTime"];
 		 $signature = $_POST["signature"];
 		 $data = $orderId.$orderAmount.$referenceId.$txStatus.$paymentMode.$txMsg.$txTime;
-		 $hash_hmac = hash_hmac('sha256', $data, $secretkey, true) ;
+		 $hash_hmac = hash_hmac('sha256', $data, $secretkey, true);
 		 $computedSignature = base64_encode($hash_hmac);
 		 if ($signature == $computedSignature) {
 	 ?>
@@ -122,13 +123,17 @@
 	 ?>
 
 
-			<div class="row" style="display: flex; justify-content: center; margin-top: 100px;">
+			<div class="row payment-success-actions" style="margin-top: 100px;">
+
 		 		<a href="<?php echo base_url('/'); ?>">
 					<button type="button" class="btn btn-primary">Go to Home</button>
 				</a>
+
+				<button type="button" class="btn btn-info" style="margin-left: 20px;" onClick="window.print();">Print Receipt</button>
+
 			</div>
 
-		 	<div class="row" style="display: flex; justify-content: center; margin-top: 20px;">
+		 	<div class="row payment-success-actions" style="margin-top: 20px;">
 				<a href="<?php echo base_url('/payment'); ?>" style="margin-left: 10px;">
 					<button type="button" class="btn btn-link">Make another payment</button>
 				</a>

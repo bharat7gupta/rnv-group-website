@@ -224,6 +224,18 @@ h1, h2, h3, h4, h5, h6 {
   color: #4B66A1;
 }
 
+.social-icons .social-icon.messenger {
+  margin-top: -3px;
+}
+
+.social-icons .social-icon.messenger svg {
+  fill: white;
+}
+
+.social-icons .social-icon.messenger:hover svg {
+  fill: #0080F8;
+}
+
 .social-icons .social-icon.youtube:hover {
   color: #FF0000;
 }

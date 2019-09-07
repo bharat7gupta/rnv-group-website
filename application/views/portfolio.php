@@ -31,7 +31,7 @@
 					<div class="col-lg-4 col-md-6 portfolio-item filter-<?=$row->type ?> wow fadeInUp">
 						<div class="portfolio-wrap">
 						<figure>
-							<img src="<?php echo base_url('assets/img/portfolio/'.$row->imageFileName) ?>" class="img-fluid" alt="<?=$row->name?>">
+							<img data-src="<?php echo base_url('assets/img/portfolio/'.$row->imageFileName) ?>" class="img-fluid" alt="<?=$row->name?>">
 							<a href="<?php echo base_url('products/#'.$row->SN) ?>" class="link-details" title="More Details">
 								<i class="ion ion-android-open"></i>
 							</a>

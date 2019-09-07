@@ -1,7 +1,21 @@
 jQuery(document).ready(function( $ ) {
 
 	$(window).on('load', function() {
-		$('#preloader').delay(100).fadeOut('slow',function(){$(this).remove();});
+		$('#preloader').fadeOut('slow',function(){$(this).remove();});
+
+		function getCssLinkTag(href) {
+			var link = document.createElement('link');
+			link.href = window.baseUrl + href;
+			link.rel="stylesheet";
+
+			return link;
+		}
+
+		// Deferred CSS Loading
+		var head = $('head');
+		head.append(getCssLinkTag('/assets/css/lib/google-font.css'));
+		head.append(getCssLinkTag('/assets/css/lib/ionicons/css/ionicons.min.css'));
+		head.append(getCssLinkTag('/assets/css/lib/font-awesome/css/font-awesome.min.css'));
 	});
 
 	$('.navbar-toggler').on('click', function () {
@@ -80,5 +94,37 @@ jQuery(document).ready(function( $ ) {
 		$('html, body').animate({scrollTop : 0},1500, 'easeInOutExpo');
 		return false;
 	});
+
+	// Intersection observer
+	function loadImage (i, img) {
+		if (!$(img).data('src')) {
+			return;
+		}
+
+		$(img).prop('src', $(img).data('src'));
+		$(img).data('src', '');
+	};
+
+	function createObserver(elementId, options) {
+		if(typeof IntersectionObserver === "undefined") {
+			$('#'+elementId).find('img').each(loadImage);
+			return;
+		}
+
+		var intersectionObserver = new IntersectionObserver(function(entries) {
+			entries.forEach(function(entry) {
+				if (entry.isIntersecting) {
+					$('#'+elementId).find('img').each(loadImage);
+				}
+			});
+		}, options);
+
+		intersectionObserver.observe(document.getElementById(elementId));
+	}
+
+	createObserver('about', { threshold: 0.1 });
+	createObserver('portfolio');
+	createObserver('testimonials');
+	createObserver('team');
 
 });

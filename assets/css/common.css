@@ -27,3 +27,14 @@
 	font-size: 13px;
 	color: #ccc;
 }
+
+.payment-success-actions {
+	display: flex;
+	justify-content: center;
+}
+
+@media print {
+	.payment-success-actions {
+		display: none;
+	}
+}
