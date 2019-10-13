@@ -15,7 +15,7 @@
 				<a class="contact-item contact-address" href='<?= CONTACT_ADDRESS_LINK ?>' target="_blank" rel="noopener">
 					<i class="ion-ios-location-outline"></i>
 					<h3><?= CONTACT_ADDRESS_TITLE ?></h3>
-					<address><?= CONTACT_ADDRESS_FIRST_LINE ?></address>
+					<address>BTM Layout</address>
 					<address><?= CONTACT_ADDRESS_SECOND_LINE ?></address>
 					<address><?= CONTACT_ADDRESS_THIRD_LINE ?></address>
 				</a>
